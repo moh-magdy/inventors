@@ -10,7 +10,8 @@
 
         static $lang = array(
           // Content
-          //Key => Value
+          //    Key      =>     Value
+         /* 'SITE_NAME'  =>     'Admin',*/
         );
         return $lang[$phrase];
     } 

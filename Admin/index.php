@@ -25,7 +25,4 @@ include 'init.php';
    </div>
          
 
-<?php
- include $tpl . "footer.php";
-
-?>
+<?php include $tpl . "footer.php"; ?>

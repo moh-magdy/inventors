@@ -12,6 +12,6 @@ include 'init.php';
 <p><?php echo lang('HELLO');?></p>
 
 <?php
- //include $tpl . "footer.php";
+ include $tpl . "footer.php";
 
 ?>

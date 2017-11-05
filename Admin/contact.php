@@ -1,12 +1,11 @@
 <?php
-
 /*
 =================================================================================
 ================================ /Backstage/ contant page =======================
 =================================================================================
 */
 
-$dsn    =   'mysql:host=localhost;dbname=';
+$dsn    =   'mysql:host=localhost;dbname=inventors';
 $user   =   'root';
 $pass   =   '';
 $option   =   array(
@@ -17,7 +16,6 @@ try {
 
     $contant    =   new PDO($dsn, $user, $pass, $option);
     $contant->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
    
 }
 

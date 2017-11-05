@@ -11,8 +11,8 @@
         static $lang = array(
           // Content
           //    Key      =>     Value
-         'HI'  =>     'Welcome!',
-         'HELLO'  =>     'Hello world ',
+         'HI'       =>     'Welcome!',
+         'HELLO'    =>     'Hello world',
         );
         return $lang[$phrase];
     } 

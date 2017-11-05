@@ -6,12 +6,13 @@
 =================================================================================
 */
 
-    function lang ($phrase) {
+    function lang($phrase) {
 
         static $lang = array(
           // Content
           //    Key      =>     Value
-         /* 'SITE_NAME'  =>     'Admin',*/
+         'HI'  =>     'Welcome!',
+         'HELLO'  =>     'Hello world ',
         );
         return $lang[$phrase];
     } 

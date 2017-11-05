@@ -21,6 +21,7 @@
     <!--[if lt IE 9]>
     <script src="layout/js/html5shiv.min.js"></script>
     <script src="layout/js/js/respond.min.js"></script>
+    <![endif]-->
   </head>
 
     <body>

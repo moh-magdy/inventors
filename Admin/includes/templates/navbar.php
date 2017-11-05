@@ -15,10 +15,12 @@
       <a href="#!" class="brand-logo">Logo</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">log in</a></li>
+      <li><a><i class="material-icons">add_shopping_cart</i></a></li>
+        <li><a href="#">log In</a></li>
         <li><a href="#">Sign Up</a></li>
         <li><a href="#">prodact</a></li>
         <li><a href="#">Contact us</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">language</i></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="sass.html">Sass</a></li>
@@ -28,4 +30,10 @@
       </ul>
     </div>
     </div>
+    <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">two</a></li>
+
+</ul>
   </nav>

@@ -23,4 +23,4 @@ include     $func   .   "function.php";
 
 
 if(!isset($noNavar)) { include  $tpl . "navbar.php";}
-if(!isset($noHeader)) { include  $tpl . "header.php";}
+/*if(!isset($noHeader)) { include  $tpl . "header.php";}*/

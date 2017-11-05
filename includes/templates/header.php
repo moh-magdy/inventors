@@ -15,6 +15,7 @@
     <!-- device-width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title Name</title>
+    <link rel="stylesheet" href="<?php echo $css; ?>style.css" />
   </head>
 
     <body>

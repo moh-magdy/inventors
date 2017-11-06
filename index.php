@@ -10,8 +10,10 @@
     //Include Header & navBar
     include 'init.php';
  ?>
+ <div class="index-page">
+   <h1>Index Page</h1>
+ </div>
 
-<h1>Index Page</h1>
 
 <?php
 //Include Footer

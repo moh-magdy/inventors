@@ -21,6 +21,5 @@ include     $lang   .   "en.php";
 //include     $lang   .   "ar.php";
 include     $func   .   "function.php";
 
-
+if(!isset($noHeader)) { include  $tpl . "header.php";}
 if(!isset($noNavar)) { include  $tpl . "navbar.php";}
-/*if(!isset($noHeader)) { include  $tpl . "header.php";}*/

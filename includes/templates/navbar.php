@@ -4,6 +4,55 @@
 ================================== /interface/ navBar page ======================
 =================================================================================
 */
+if(!isset($_SESSION)){session_start();}
+
+ if (isset($_SESSION['Username'])) {
+        header('Location: https://www.google.com.tr/'); //Redirect To Dashbord Page
+    }
+
+    include_once 'Admin/contact.php';
+
+    // Check If Coming Form HTTP Post Request
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        
+        $username = $_POST['user'];
+        $password = $_POST['pass'];
+        $hashedpass = sha1($password);
+
+        // Check If User Exist In Database
+
+        $stmt = $con->prepare("SELECT 
+                                   UserID, Username, Password 
+                                FROM 
+                                    Users 
+                                WHERE 
+                                    Username = ? 
+                                AND 
+                                    Password = ? 
+                                AND 
+                                    GroupID = 1
+                                LIMIT 1");
+        $stmt->execute(array($username, $hashedpass));
+        $row = $stmt->fetch();
+        $count = $stmt->rowCount();
+
+        //if Count > 0 This Mean The Databese Contain About Thih Username 
+        if ($count > 0) {
+            
+            $_SESSION['Username'] = $username;
+            $_SESSION['ID'] = $row['UserID'];
+            header('Location: https://www.google.com.tr/'); //Redirect To index Page
+            exit();
+        }
+   }
+
+
+
+
+
+
+
 ?>
 <nav class="light-blue darken-4">
   <div class="container">
@@ -39,7 +88,7 @@
 <div id="log-in" class="modal">
   <div class="modal-content">
     <div class="row">
-      <form class="col s12">
+      <form class="col s12" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
         <div class="row">
           <div class="input-field col s12">
             <input id="email" type="email" class="validate">
@@ -56,7 +105,7 @@
         </div>
         <div class="row">
           <div class="col s12">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue">log in</a>
+            <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue" name="" value="log in">
           </div>
         </div>
 
@@ -68,7 +117,7 @@
 <div id="modal2" class="modal">
   <div class="modal-content">
     <div class="row">
-      <form class="col s12">
+      <form class="col s12" >
         <div class="row">
           <div class="input-field col s12">
             <input id="email" type="email" class="validate">
@@ -85,8 +134,7 @@
         </div>
         <div class="row">
           <div class="col s12">
-          
-          <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue" name="" value="log in">
+            <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue"  value="log in">
           </div>
         </div>
 

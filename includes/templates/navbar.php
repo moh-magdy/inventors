@@ -7,7 +7,7 @@
 if(!isset($_SESSION)){session_start();}
 
  if (isset($_SESSION['userEmail'])) {
-        header('Location: https://www.google.com'); //Redirect To Dashbord Page
+        header('Location: index.php'); //Redirect To Dashbord Page
     }
 
     include_once 'Admin/contact.php';

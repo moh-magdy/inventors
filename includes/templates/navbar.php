@@ -6,7 +6,7 @@
 */
 if(!isset($_SESSION)){session_start();}
 
- if (isset($_SESSION['Username'])) {
+ if (isset($_SESSION['userEmail'])) {
         header('Location: https://www.google.com'); //Redirect To Dashbord Page
     }
 
@@ -40,10 +40,13 @@ if(!isset($_SESSION)){session_start();}
         //if Count > 0 This Mean The Databese Contain About Thih Username 
         if ($count > 0) {
             
-            $_SESSION['Username'] = $username;
+            $_SESSION['userEmail'] = $userEmail;
             $_SESSION['ID'] = $row['UserID'];
             header('Location: https://www.google.com'); //Redirect To index Page
             exit();
+        } else {
+            
+            exit('Error');
         }
    }
 

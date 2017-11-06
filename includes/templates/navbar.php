@@ -134,7 +134,7 @@ if(!isset($_SESSION)){session_start();}
         </div>
         <div class="row">
           <div class="col s12">
-            <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue"  value="log in">
+            <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue" name="" value="log in">
           </div>
         </div>
 

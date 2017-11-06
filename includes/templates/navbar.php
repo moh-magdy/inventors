@@ -11,7 +11,7 @@
     <a href="#!" class="brand-logo">Logo</a>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li><a class="waves-effect waves-light modal-trigger" href="#modal1">log In</a></li>
+      <li><a class="waves-effect waves-light modal-trigger" href="#log-in">log In</a></li>
 
       <li><a class="waves-effect waves-light" href="#">Sign Up</a></li>
       <li><a class="waves-effect waves-light" href="#">prodact</a></li>
@@ -36,7 +36,7 @@
     </ul>
 
 <!-- * login modal * -->
-<div id="modal1" class="modal">
+<div id="log-in" class="modal">
   <div class="modal-content">
     <div class="row">
       <form class="col s12">
@@ -54,14 +54,44 @@
             <label for="password">Password</label>
           </div>
         </div>
-
+        <div class="row">
+          <div class="col s12">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue">log in</a>
+          </div>
+        </div>
 
       </form>
     </div>
   </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue">log in</a>
+</div>
+<!-- * sign in modal * -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
 
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate" autocomplete="off">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+          
+          <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue" name="" value="log in">
+          </div>
+        </div>
+
+      </form>
+    </div>
   </div>
 </div>
 

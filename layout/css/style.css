@@ -1,0 +1,15 @@
+nav #log-in .btn-flat {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  height: 45px;
+  padding: 5px;
+  width: 100%
+}
+
+.index-page {
+  height: 1000px
+}
+nav #log-in  input {
+  color: #000
+}

@@ -9,7 +9,7 @@
 
 
 
-  <nav>
+  <nav class="light-blue darken-4">
     <div class="container">
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">Logo</a>
@@ -19,7 +19,7 @@
         <li><a class="waves-effect waves-light" href="#">Sign Up</a></li>
         <li><a class="waves-effect waves-light" href="#">prodact</a></li>
         <li><a class="waves-effect waves-light" href="#">Contact us</a></li>
-        <li><a class="waves-effect waves-light"><i class="material-icons">add_shopping_cart</i></a></li>
+        <li><a class="waves-effect waves-light"><i class="material-icons">shopping_cart</i></a></li>
         <li><a class="dropdown-button waves-effect waves-light" href="#!" data-activates="dropdown1"><i class="material-icons right">language</i></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">

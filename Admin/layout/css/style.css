@@ -1,6 +1,19 @@
 body {
 
 }
-.page {
-  min-height: 1000px  
+
+/* admin */
+.admin-page {
+  margin-top: 50px;
+  min-height: 1000px
+}
+.admin-page h4 {
+    margin: 0px 28%;
+}
+.row {
+  margin-top: 30px;
+}
+.admin-page .collection button {
+  margin-left: 50%;
+  padding: 0 15px;
 }

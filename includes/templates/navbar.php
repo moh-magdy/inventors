@@ -56,7 +56,7 @@
         </div>
         <div class="row">
           <div class="col s12">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue">log in</a>
+        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue" name="" value="log in">
           </div>
         </div>
 
@@ -85,7 +85,6 @@
         </div>
         <div class="row">
           <div class="col s12">
-          
           <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue" name="" value="log in">
           </div>
         </div>

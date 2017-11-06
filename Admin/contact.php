@@ -14,8 +14,8 @@ $option   =   array(
 
 try {
 
-    $contant    =   new PDO($dsn, $user, $pass, $option);
-    $contant->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $con    =   new PDO($dsn, $user, $pass, $option);
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    
 }
 

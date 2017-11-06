@@ -7,7 +7,7 @@
 if(!isset($_SESSION)){session_start();}
 
  if (isset($_SESSION['Username'])) {
-        header('Location: https://www.google.com.tr/'); //Redirect To Dashbord Page
+        header('Location: https://www.google.com'); //Redirect To Dashbord Page
     }
 
     include_once 'Admin/contact.php';
@@ -16,24 +16,24 @@ if(!isset($_SESSION)){session_start();}
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
-        $username = $_POST['user'];
-        $password = $_POST['pass'];
+        $userEmail  = $_POST['user'];
+        $password   = $_POST['pass'];
         $hashedpass = sha1($password);
 
         // Check If User Exist In Database
 
         $stmt = $con->prepare("SELECT 
-                                   UserID, Username, Password 
+                                   UserID, Email, Password 
                                 FROM 
                                     Users 
                                 WHERE 
-                                    Username = ? 
+                                    Email = ? 
                                 AND 
                                     Password = ? 
                                 AND 
                                     GroupID = 1
                                 LIMIT 1");
-        $stmt->execute(array($username, $hashedpass));
+        $stmt->execute(array($userEmail, $hashedpass));
         $row = $stmt->fetch();
         $count = $stmt->rowCount();
 
@@ -42,7 +42,7 @@ if(!isset($_SESSION)){session_start();}
             
             $_SESSION['Username'] = $username;
             $_SESSION['ID'] = $row['UserID'];
-            header('Location: https://www.google.com.tr/'); //Redirect To index Page
+            header('Location: https://www.google.com'); //Redirect To index Page
             exit();
         }
    }
@@ -91,7 +91,7 @@ if(!isset($_SESSION)){session_start();}
       <form class="col s12" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
         <div class="row">
           <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
+            <input id="email" type="email" name="user" class="validate">
             <label for="email">Email</label>
           </div>
         </div>
@@ -99,7 +99,7 @@ if(!isset($_SESSION)){session_start();}
 
         <div class="row">
           <div class="input-field col s12">
-            <input id="password" type="password" class="validate" autocomplete="off">
+            <input id="password" type="password" name="pass" class="validate" autocomplete="off">
             <label for="password">Password</label>
           </div>
         </div>
@@ -116,31 +116,5 @@ if(!isset($_SESSION)){session_start();}
 <!-- * sign in modal * -->
 <div id="modal2" class="modal">
   <div class="modal-content">
-    <div class="row">
-      <form class="col s12" >
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
-            <label for="email">Email</label>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate" autocomplete="off">
-            <label for="password">Password</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue" value="log in">
-          </div>
-        </div>
-
-      </form>
-    </div>
-  </div>
-</div>
-
+    <div class="row"> 
 </nav>

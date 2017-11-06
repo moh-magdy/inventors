@@ -20,6 +20,12 @@ nav #log-in input[type=email]:not(.browser-default):focus:not([readonly]){
   box-shadow: 0 1px 0 0 #01579B;
   color: #01579B
 }
+nav #log-in input[type=password]:not(.browser-default):focus:not([readonly]){
+  border-bottom: 1px solid #01579B;
+  -webkit-box-shadow: 0 1px 0 0 #01579B;
+  box-shadow: 0 1px 0 0 #01579B;
+  color: #01579B
+}
 nav #log-in label {
   color: #01579B
 }

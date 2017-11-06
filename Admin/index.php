@@ -29,7 +29,7 @@ include 'init.php';
           <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
         </ul>
 
-        <a href="#" data-activates="slide-out" class="btn-floating btn-large waves-effect waves-light red button-collapse light-blue"><i class="material-icons">add</i></a>
+        <a href="#" data-activates="slide-out" class="btn-floating btn-large waves-effect waves-light red button-collapse light-blue pulse"><i class="material-icons">add</i></a>
 
       </div>
 
@@ -39,7 +39,44 @@ include 'init.php';
         <div class="col s12 m6 l4">
           <ul class="collection with-header">
             <li class="collection-header"><h5>First Names</h4></li>
-            <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons blue-text">create</i></a></div></li>
+
+            <li class="collection-item"><div>Alvin<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons blue-text">create</i></a></div></li>
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">First Name</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close "><input type="submit" name="" value="submit" class="btn-flat blue"></a>
+              </div>
+            </div>
+
             <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons blue-text">create</i></a></div></li>
             <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons blue-text">create</i></a></div></li>
             <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons blue-text">create</i></a></div></li>

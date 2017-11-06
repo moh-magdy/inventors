@@ -2,7 +2,7 @@
 $( document ).ready(function(){
   // Initialize collapse button
   $(".dropdown-button").dropdown();
-  
+  $('.modal').modal();
 
   // Initialize collapse button
  $(".button-collapse").sideNav();

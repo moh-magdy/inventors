@@ -1,4 +1,4 @@
-nav #modal1 .btn-flat {
+nav #log-in .btn-flat {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -9,4 +9,7 @@ nav #modal1 .btn-flat {
 
 .index-page {
   height: 1000px
+}
+nav #log-in  input {
+  color: #000
 }

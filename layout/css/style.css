@@ -10,8 +10,9 @@ nav #log-in .btn-flat {
 .index-page {
   height: 1000px
 }
-nav #log-in  input {
-  color: #000
+nav #log-in input[type=submit] {
+  height: 100%;
+  width: 100%;
 }
 nav #log-in input[type=email]:not(.browser-default):focus:not([readonly]){
   border-bottom: 1px solid #01579B;

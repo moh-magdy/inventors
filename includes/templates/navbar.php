@@ -15,37 +15,37 @@ if(!isset($_SESSION)){session_start();}
     // Check If Coming Form HTTP Post Request
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        
+
         $userEmail  = $_POST['user'];
         $password   = $_POST['pass'];
         $hashedpass = sha1($password);
 
         // Check If User Exist In Database
 
-        $stmt = $con->prepare("SELECT 
-                                   UserID, Email, Password 
-                                FROM 
-                                    Users 
-                                WHERE 
-                                    Email = ? 
-                                AND 
-                                    Password = ? 
-                                AND 
+        $stmt = $con->prepare("SELECT
+                                   UserID, Email, Password
+                                FROM
+                                    Users
+                                WHERE
+                                    Email = ?
+                                AND
+                                    Password = ?
+                                AND
                                     GroupID = 1
                                 LIMIT 1");
         $stmt->execute(array($userEmail, $hashedpass));
         $row = $stmt->fetch();
         $count = $stmt->rowCount();
 
-        //if Count > 0 This Mean The Databese Contain About Thih Username 
+        //if Count > 0 This Mean The Databese Contain About Thih Username
         if ($count > 0) {
-            
+
             $_SESSION['userEmail'] = $userEmail;
             $_SESSION['ID'] = $row['UserID'];
             header('Location: https://www.google.com'); //Redirect To index Page
             exit();
         } else {
-            
+
             exit('Error');
         }
    }
@@ -108,7 +108,7 @@ if(!isset($_SESSION)){session_start();}
         </div>
         <div class="row">
           <div class="col s12">
-            <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue" value="log in">
+            <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat blue in-wth" value="log in">
           </div>
         </div>
 
@@ -119,5 +119,5 @@ if(!isset($_SESSION)){session_start();}
 <!-- * sign in modal * -->
 <div id="modal2" class="modal">
   <div class="modal-content">
-    <div class="row"> 
+    <div class="row">
 </nav>

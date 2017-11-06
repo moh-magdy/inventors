@@ -54,15 +54,16 @@
             <label for="password">Password</label>
           </div>
         </div>
-
+        <div class="row">
+          <div class="col s12">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue">log in</a>
+          </div>
+        </div>
 
       </form>
     </div>
   </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue">log in</a>
 
-  </div>
 </div>
 
 </nav>

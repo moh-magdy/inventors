@@ -1,0 +1,11 @@
+nav #modal1 .btn-flat {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  height: 45px;
+  padding: 5px;
+  width: 100%
+}
+body {
+  height: 2000px
+}

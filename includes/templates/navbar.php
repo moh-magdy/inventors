@@ -11,12 +11,13 @@
     <a href="#!" class="brand-logo">Logo</a>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li><a class="waves-effect waves-light" href="#">log In</a></li>
+      <li><a class="waves-effect waves-light modal-trigger" href="#modal1">log In</a></li>
+
       <li><a class="waves-effect waves-light" href="#">Sign Up</a></li>
       <li><a class="waves-effect waves-light" href="#">prodact</a></li>
       <li><a class="waves-effect waves-light" href="#">Contact us</a></li>
       <li><a class="waves-effect waves-light"><i class="material-icons">shopping_cart</i></a></li>
-      <li><a class="dropdown-button waves-effect waves-light" href="#!" data-activates="dropdown1"><i class="material-icons right">language</i></a></li>
+      <li><a class="dropdown-button waves-effect waves-light" href="#!" data-activates="dropdown1">        <i class="material-icons right">language</i></a></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
       <li><a href="sass.html">Sass</a></li>
@@ -26,10 +27,42 @@
     </ul>
   </div>
   </div>
-  <ul id="dropdown1" class="dropdown-content">
-<li><a href="#!">one</a></li>
-<li class="divider"></li>
-<li><a href="#!">two</a></li>
 
-</ul>
+  <!-- * lng  dropdown * -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">two</a></li>
+    </ul>
+
+<!-- * login modal * -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate" autocomplete="off">
+            <label for="password">Password</label>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue">log in</a>
+
+  </div>
+</div>
+
 </nav>
